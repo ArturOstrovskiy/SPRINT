@@ -16,7 +16,9 @@ form.addEventListener('submit', function (event) { //по клику на эле
 
 
 	const newItem = document.createElement('li') //присваиваем переменной newItem созданный новый элемент 'li'
-	newItem.classList.add('item') //добавляем нашей новой li класс item
-	newItem.textContent = text //добавляем нашей новой li текст из input.value (<li>text</li>)
-	list.append(newItem) //добавляем в элемент с классом list наш newItem
+	newItem.classList.add('item')//добавляем нашей новой li класс item
+	if (text !== "") { //проверка на пустую строку
+		newItem.textContent = text //добавляем нашей новой li текст из input.value (<li>text</li>)
+		list.append(newItem) //добавляем в элемент с классом list наш newItem
+	}
 })
