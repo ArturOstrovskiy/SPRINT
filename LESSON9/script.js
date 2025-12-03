@@ -124,7 +124,7 @@ function createForm(massageBox){
 	<input name = 'input' type = 'text' placeholder="Введите имя" required>
 	<button  type="submit">Добавить</button>
 	`
-	form.addEventListener('submit', event => {
+	form.addEventListener('submit', function (event) {
 		event.preventDefault();
 		const input = form.elements['input'];
 		const value = input.value;
